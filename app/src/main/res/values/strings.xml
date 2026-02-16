@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RacingGame</string>
+    <string name="start">Start</string>
+    <string name="car1">Car1</string>
+    <string name="car2">Car2</string>
+    <string name="startt">СТАРТ</string>
+    <string name="go1">ЕХАТЬ</string>
+    <string name="go2">ЕХАТЬ</string>
+</resources>
