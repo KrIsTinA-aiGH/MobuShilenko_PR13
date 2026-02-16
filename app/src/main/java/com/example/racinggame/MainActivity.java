@@ -12,17 +12,15 @@ import android.graphics.Color;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    // Элементы интерфейса
     ImageView car1, car2, finishLine;
     Button btnStart, btnMove1, btnMove2, btnMode;
-    // TextView txtResult; // Закомментировали, так как удалили из XML
 
-    // Игровые флаги
     boolean isStarted = false;      // Началась ли гонка
     boolean isFinished = false;     // Закончилась ли гонка
     float car1Position = 0;         // Позиция первой машины
     float car2Position = 0;         // Позиция второй машины
     float finishPosition = 0;       // Позиция финиша
+
 
     // Для автоматического движения второй машины
     Handler handler = new Handler(Looper.getMainLooper());
@@ -95,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Метод сброса игры (рестарт)
+    // Метод сброса игры
     private void resetGame() {
         isStarted = false;
         isFinished = false;
@@ -123,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Получаем реальную позицию финиша (начало финишной черты минус ширина машины)
-        float finishX = finishLine.getX() - car1.getWidth();  // Переименовали в finishX
+        float finishX = finishLine.getX() - car1.getWidth();
 
         // Проверяем, не доехала ли уже машина до финиша
         if (car1Position >= finishX) {
@@ -152,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Получаем реальную позицию финиша (начало финишной черты минус ширина машины)
-        float finishX = finishLine.getX() - car2.getWidth();  // Переименовали в finishX
+        float finishX = finishLine.getX() - car2.getWidth();
 
         // Проверяем, не доехала ли уже машина до финиша
         if (car2Position >= finishX) {
